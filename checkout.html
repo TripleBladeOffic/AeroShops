@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - My Discord Shop</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(120deg, #3b4371, #f3904f, #4e54c8, #0abde3);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+
+        .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff6b6b;
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: #ff4b4b;
+        }
+
+        .back-btn {
+            font-size: 1em;
+            color: white;
+            background-color: #7289da;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #5865f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <p>You are about to purchase <strong>Product 1</strong>.</p>
+        <p class="price">Total: $10</p>
+        <a href="https://paypal.com/checkout-link" class="checkout-btn">Proceed to PayPal</a>
+        <br>
+        <a href="index.html" class="back-btn">Continue Shopping</a>
+    </div>
+</body>
+</html>
