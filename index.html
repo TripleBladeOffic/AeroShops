@@ -33,6 +33,11 @@
             margin-bottom: 0.5em;
         }
 
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
         p {
             font-size: 1.5em;
             margin-bottom: 1.5em;
@@ -68,10 +73,22 @@
             margin: 10px;
             width: 300px;
             text-align: left;
+            cursor: pointer;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
 
         .product h3 {
             margin-top: 0;
+        }
+
+        .product a {
+            text-decoration: none;
+            color: inherit;
         }
 
         .testimonials {
@@ -106,20 +123,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to My Discord Shop</h1>
+        <h1>My Discord Shop</h1>
         <p>Join our community and explore the best deals on our shop.</p>
         <a href="https://discord.gg/Fhvj8uVnxy" class="join-btn">Join Our Discord</a>
         
+        <h2>Our Products</h2>
         <section class="products">
             <div class="product">
-                <h3>Product/Service 1</h3>
-                <p>Description of your first product or service. Highlight key features and pricing.</p>
-                <p><strong>Price:</strong> $10</p>
+                <a href="product1.html">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p><strong>Price:</strong> $10</p>
+                </a>
             </div>
             <div class="product">
-                <h3>Product/Service 2</h3>
-                <p>Description of your second product or service. Highlight key features and pricing.</p>
-                <p><strong>Price:</strong> $20</p>
+                <a href="product2.html">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p><strong>Price:</strong> $20</p>
+                </a>
             </div>
             <!-- Add more products as needed -->
         </section>
