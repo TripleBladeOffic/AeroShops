@@ -9,17 +9,35 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
-            background: linear-gradient(120deg, #2c2c2c, #3a3a3a, #1f1f1f);
-            background-size: 200% 200%;
-            animation: gradientBG 15s ease infinite;
+            background: linear-gradient(120deg, #1e1e2f, #5c258d, #341f97, #0f0c29);
+            background-size: 400% 400%;
+            animation: gradientBG 20s ease infinite;
             box-sizing: border-box;
             overflow-x: hidden;
+            transition: background 0.5s ease;
         }
 
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        .theme-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .theme-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .container {
@@ -29,16 +47,19 @@
             text-align: center;
         }
 
+        h1, h2, p {
+            margin: 0;
+            color: white;
+        }
+
         h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
-            color: #8a2be2;
         }
 
         h2 {
             font-size: 2.5em;
             margin-bottom: 1em;
-            color: #cfcfcf;
         }
 
         p {
@@ -46,20 +67,20 @@
             margin-bottom: 1.5em;
         }
 
-        .join-btn {
-            font-size: 1.2em;
-            color: white;
-            background-color: #333;
+        .join-btn, .product a {
+            display: inline-block;
             padding: 0.7em 1.5em;
+            background-color: rgba(255, 255, 255, 0.1);
             border: none;
             border-radius: 5px;
+            color: white;
             text-decoration: none;
-            display: inline-block;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        .join-btn:hover {
-            background-color: #555;
+        .join-btn:hover, .product a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .products {
@@ -70,7 +91,7 @@
         }
 
         .product {
-            background-color: #333;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
@@ -82,23 +103,13 @@
 
         .product:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px #8a2be2;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
 
         .product img {
             max-width: 100%;
             border-radius: 10px;
             margin-bottom: 10px;
-        }
-
-        .product h3 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #cfcfcf;
-        }
-
-        .product p {
-            color: #a6a6a6;
         }
 
         .footer {
@@ -108,6 +119,7 @@
     </style>
 </head>
 <body>
+    <button class="theme-btn" onclick="toggleTheme()">Change Theme</button>
     <div class="container">
         <h1>My Discord Shop</h1>
         <p>Join our community and explore the best deals on our shop.</p>
@@ -132,5 +144,24 @@
             <!-- Add more products as needed -->
         </section>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentBackground = getComputedStyle(body).backgroundImage;
+
+            if (currentBackground.includes("linear-gradient(120deg, #1e1e2f")) {
+                body.style.background = "linear-gradient(120deg, #2c2c2c, #3a3a3a, #1f1f1f)";
+                body.style.backgroundSize = "200% 200%";
+                body.style.animation = "gradientBG 15s ease infinite";
+                body.style.setProperty('--neon-glow', '#8a2be2');
+            } else {
+                body.style.background = "linear-gradient(120deg, #1e1e2f, #5c258d, #341f97, #0f0c29)";
+                body.style.backgroundSize = "400% 400%";
+                body.style.animation = "gradientBG 20s ease infinite";
+                body.style.setProperty('--neon-glow', '#d4af37');
+            }
+        }
+    </script>
 </body>
 </html>
