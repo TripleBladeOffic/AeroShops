@@ -14,12 +14,30 @@
             animation: gradientBG 20s ease infinite;
             box-sizing: border-box;
             overflow-x: hidden;
+            transition: background 0.5s ease;
         }
 
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        .theme-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .theme-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .container {
@@ -32,15 +50,11 @@
         h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
-            color: #d4af37;
-            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
         }
 
         h2 {
             font-size: 2.5em;
             margin-bottom: 1em;
-            color: #a6c0fe;
-            text-shadow: 0 0 10px #a6c0fe, 0 0 20px #a6c0fe;
         }
 
         p {
@@ -51,18 +65,17 @@
         .join-btn {
             font-size: 1.2em;
             color: white;
-            background-color: #6a0572;
+            background-color: #333;
             padding: 0.7em 1.5em;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             display: inline-block;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .join-btn:hover {
-            background-color: #9d50bb;
-            box-shadow: 0 0 10px #9d50bb, 0 0 20px #9d50bb, 0 0 30px #9d50bb;
+            background-color: #555;
         }
 
         .products {
@@ -73,7 +86,7 @@
         }
 
         .product {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #333;
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
@@ -85,7 +98,7 @@
 
         .product:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px #a6c0fe, 0 0 30px #a6c0fe;
+            box-shadow: 0 0 20px #555;
         }
 
         .product img {
@@ -94,52 +107,18 @@
             margin-bottom: 10px;
         }
 
-        .product h3 {
-            margin-top: 0;
-            color: #d4af37;
-        }
-
-        .product p {
-            color: #a6c0fe;
-        }
-
-        .product a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .testimonials {
-            margin: 3em 0;
-        }
-
-        .testimonial {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px auto;
-            max-width: 800px;
+        .product h3, .product p {
+            margin: 0;
         }
 
         .footer {
-            margin-top: 3em;
-            padding: 1em;
-            background-color: rgba(0, 0, 0, 0.9);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: none;
         }
 
-        .footer a {
-            color: #6a0572;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .footer a:hover {
-            color: #9d50bb;
-        }
     </style>
 </head>
 <body>
+    <button class="theme-btn" onclick="toggleTheme()">Switch Theme</button>
     <div class="container">
         <h1>My Discord Shop</h1>
         <p>Join our community and explore the best deals on our shop.</p>
@@ -163,24 +142,25 @@
             </div>
             <!-- Add more products as needed -->
         </section>
-
-        <section class="testimonials">
-            <h2>Customer Testimonials</h2>
-            <div class="testimonial">
-                <p>"This shop is amazing! Great deals and fast service."</p>
-                <p><strong>- Happy Customer</strong></p>
-            </div>
-            <div class="testimonial">
-                <p>"Excellent customer support and quality products. Highly recommend!"</p>
-                <p><strong>- Satisfied Client</strong></p>
-            </div>
-            <!-- Add more testimonials as needed -->
-        </section>
-
-        <section class="footer">
-            <p>Contact us at <a href="mailto:support@yourshop.com">support@yourshop.com</a> or join our <a href="https://discord.gg/Fhvj8uVnxy">Discord</a> for more info.</p>
-            <p>Follow us on <a href="https://twitter.com/yourshop" target="_blank">Twitter</a>, <a href="https://facebook.com/yourshop" target="_blank">Facebook</a>, and <a href="https://instagram.com/yourshop" target="_blank">Instagram</a>.</p>
-        </section>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentBackground = getComputedStyle(body).backgroundImage;
+
+            if (currentBackground.includes("linear-gradient(120deg, #1e1e2f")) {
+                body.style.background = "linear-gradient(120deg, #2c2c2c, #3a3a3a, #1f1f1f)";
+                body.style.backgroundSize = "200% 200%";
+                body.style.animation = "gradientBG 15s ease infinite";
+                body.style.setProperty('--neon-glow', '#8a2be2');
+            } else {
+                body.style.background = "linear-gradient(120deg, #1e1e2f, #5c258d, #341f97, #0f0c29)";
+                body.style.backgroundSize = "400% 400%";
+                body.style.animation = "gradientBG 20s ease infinite";
+                body.style.setProperty('--neon-glow', '#d4af37');
+            }
+        }
+    </script>
 </body>
 </html>
