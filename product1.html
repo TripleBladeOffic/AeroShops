@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product 1 - My Discord Shop</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(120deg, #3b4371, #f3904f, #4e54c8, #0abde3);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+
+        .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            font-size: 1.2em;
+            color: white;
+            background-color: #ff6b6b;
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: #ff4b4b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product 1</h1>
+        <img src="product1.jpg" alt="Product 1">
+        <p>Here you can add a detailed description of the product, including features, specifications, and any other relevant information.</p>
+        <p class="price">$10</p>
+        <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    </div>
+</body>
+</html>
