@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ambient Background Website</title>
+    <title>My Discord Shop</title>
     <style>
         body {
             margin: 0;
@@ -16,6 +16,9 @@
             background: linear-gradient(120deg, #3b4371, #f3904f, #4e54c8, #0abde3);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         @keyframes gradientBG {
@@ -26,17 +29,36 @@
 
         h1 {
             font-size: 3em;
+            margin-bottom: 0.5em;
         }
 
         p {
             font-size: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .join-btn {
+            font-size: 1.2em;
+            color: white;
+            background-color: #7289da;
+            padding: 0.7em 1.5em;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .join-btn:hover {
+            background-color: #5865f2;
         }
     </style>
 </head>
 <body>
     <div>
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple page with an ambient background.</p>
+        <h1>Welcome to My Discord Shop</h1>
+        <p>Join our community and explore the best deals on our shop.</p>
+        <a href="https://discord.gg/Fhvj8uVnxy" class="join-btn">Join Our Discord</a>
     </div>
 </body>
 </html>
