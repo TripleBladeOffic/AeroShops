@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Discord Shop</title>
+    <title>Aero Shop</title>
     <style>
         body {
             margin: 0;
@@ -112,6 +112,16 @@
             margin-bottom: 10px;
         }
 
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-info h3 {
+            margin: 0;
+        }
+
         .footer {
             display: none;
         }
@@ -121,7 +131,7 @@
 <body>
     <button class="theme-btn" onclick="toggleTheme()">Change Theme</button>
     <div class="container">
-        <h1>My Discord Shop</h1>
+        <h1>Aero Shop</h1>
         <p>Join our community and explore the best deals on our shop.</p>
         <a href="https://discord.gg/Fhvj8uVnxy" class="join-btn">Join Our Discord</a>
         
@@ -130,15 +140,19 @@
             <div class="product">
                 <a href="product1.html">
                     <img src="product1.jpg" alt="Product 1">
-                    <h3>Product 1</h3>
-                    <p><strong>Price:</strong> $10</p>
+                    <div class="product-info">
+                        <h3>Product 1</h3>
+                        <p>12$</p>
+                    </div>
                 </a>
             </div>
             <div class="product">
                 <a href="product2.html">
                     <img src="product2.jpg" alt="Product 2">
-                    <h3>Product 2</h3>
-                    <p><strong>Price:</strong> $20</p>
+                    <div class="product-info">
+                        <h3>Product 2</h3>
+                        <p>20$</p>
+                    </div>
                 </a>
             </div>
             <!-- Add more products as needed -->
