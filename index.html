@@ -26,7 +26,7 @@
         }
 
         .content {
-            margin-top: 15vh; /* Positions content 15% from the top */
+            margin-top: 12vh; /* Positions content 12% from the top */
             text-align: center;
         }
 
@@ -37,7 +37,8 @@
 
         p {
             font-size: 1.5em;
-            margin-top: 10px; /* Spacing between heading and paragraph */
+            margin-top: 10px;
+            font-style: italic; /* Styling to distinguish the quotes */
         }
 
         .discord-btn {
@@ -56,6 +57,56 @@
         .discord-btn:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
+
+        .product-list {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+
+        .product-item {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.02);
+        }
+
+        .product-image {
+            width: 150px;
+            height: 150px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            flex-grow: 1;
+            color: white;
+        }
+
+        .product-title {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .product-price {
+            font-size: 1.5em;
+            color: #ffb347;
+        }
     </style>
 </head>
 <body>
@@ -64,7 +115,20 @@
     </a>
     <div class="content">
         <h1>Aero Vault</h1>
-        <p>The Place Where We Care About You</p>
+        <p>"The Place Where We Care About You"</p>
+    </div>
+
+    <div class="product-list">
+        <!-- Sample Product Box -->
+        <div class="product-item">
+            <img src="your-image-url.jpg" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <div class="product-title">Product Title</div>
+                <div class="product-description">This is a description of the product. It provides some information about what the product is.</div>
+                <div class="product-price">$99.99</div>
+            </div>
+        </div>
+        <!-- Repeat product-item block for more products -->
     </div>
 </body>
 </html>
