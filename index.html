@@ -32,9 +32,10 @@
             font-size: 1.5em;
         }
 
-        .theme-btn, .discord-btn {
+        .discord-btn {
             position: absolute;
             top: 20px;
+            right: 20px;
             padding: 10px 20px;
             background-color: rgba(255, 255, 255, 0.1);
             border: none;
@@ -44,21 +45,12 @@
             transition: background-color 0.3s ease;
         }
 
-        .theme-btn:hover, .discord-btn:hover {
+        .discord-btn:hover {
             background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .theme-btn {
-            left: 20px;
-        }
-
-        .discord-btn {
-            right: 20px;
         }
     </style>
 </head>
 <body>
-    <button class="theme-btn">Change Theme</button>
     <a href="https://discord.gg/Fhvj8uVnxy" target="_blank">
         <button class="discord-btn">Discord</button>
     </a>
