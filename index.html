@@ -9,7 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: white;
-            background: linear-gradient(120deg, #1e1e2f, #5c258d, #341f97, #0f0c29);
+            background: linear-gradient(120deg, #2a2a3a, #3a2a5a, #2c1a3a, #1a0a2a);
             background-size: 400% 400%;
             animation: gradientBG 20s ease infinite;
             box-sizing: border-box;
@@ -40,6 +40,20 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
+        .discord-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .discord-logo:hover {
+            transform: scale(1.1);
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -47,7 +61,7 @@
             text-align: center;
         }
 
-        h1, h2, p {
+        h1, h2 {
             margin: 0;
             color: white;
         }
@@ -60,27 +74,6 @@
         h2 {
             font-size: 2.5em;
             margin-bottom: 1em;
-        }
-
-        p {
-            font-size: 1.5em;
-            margin-bottom: 1.5em;
-        }
-
-        .join-btn, .product a {
-            display: inline-block;
-            padding: 0.7em 1.5em;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: none;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .join-btn:hover, .product a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
         }
 
         .products {
@@ -145,10 +138,11 @@
 </head>
 <body>
     <button class="theme-btn" onclick="toggleTheme()">Change Theme</button>
+    <a href="https://discord.gg/Fhvj8uVnxy" target="_blank">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/discord-2474804-2056093.png" alt="Discord Logo" class="discord-logo">
+    </a>
     <div class="container">
         <h1>Aero Shop</h1>
-        <p>Join our community and explore the best deals on our shop.</p>
-        <a href="https://discord.gg/Fhvj8uVnxy" class="join-btn">Join Our Discord</a>
         
         <h2>Our Products</h2>
         <section class="products">
@@ -179,16 +173,14 @@
             const body = document.body;
             const currentBackground = getComputedStyle(body).backgroundImage;
 
-            if (currentBackground.includes("linear-gradient(120deg, #1e1e2f")) {
+            if (currentBackground.includes("linear-gradient(120deg, #2a2a3a")) {
                 body.style.background = "linear-gradient(120deg, #2c2c2c, #3a3a3a, #1f1f1f)";
                 body.style.backgroundSize = "200% 200%";
                 body.style.animation = "gradientBG 15s ease infinite";
-                body.style.setProperty('--neon-glow', '#8a2be2');
             } else {
-                body.style.background = "linear-gradient(120deg, #1e1e2f, #5c258d, #341f97, #0f0c29)";
+                body.style.background = "linear-gradient(120deg, #2a2a3a, #3a2a5a, #2c1a3a, #1a0a2a)";
                 body.style.backgroundSize = "400% 400%";
                 body.style.animation = "gradientBG 20s ease infinite";
-                body.style.setProperty('--neon-glow', '#d4af37');
             }
         }
     </script>
