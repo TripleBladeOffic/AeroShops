@@ -9,7 +9,7 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-direction: column;
             font-family: Arial, sans-serif;
@@ -25,15 +25,18 @@
             100% { background-position: 0% 50%; }
         }
 
+        .content {
+            margin-top: 25vh; /* Positions content 25% from the top */
+            text-align: center;
+        }
+
         h1 {
             font-size: 3em;
-            text-align: center;
             margin: 0;
         }
 
         p {
             font-size: 1.5em;
-            text-align: center;
             margin-top: 10px; /* Spacing between heading and paragraph */
         }
 
@@ -59,7 +62,7 @@
     <a href="https://discord.gg/Fhvj8uVnxy" target="_blank">
         <button class="discord-btn">Discord</button>
     </a>
-    <div>
+    <div class="content">
         <h1>Aero Vault</h1>
         <p>The Place Where We Care About You</p>
     </div>
