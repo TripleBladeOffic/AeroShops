@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Boxed Axes - Aero Vault</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(120deg, #3b4371, #f3904f, #4e54c8, #0abde3);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .product-detail {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .product-description {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .product-price {
+            font-size: 2em;
+            color: #ffb347;
+            margin-bottom: 30px;
+        }
+
+        .checkout-btn {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            background-color: #ffb347;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background-color: #e0a84a;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-detail">
+        <img src="https://media.discordapp.net/attachments/1266696186069254236/1274278483140411463/image.png?ex=66c1abd1&is=66c05a51&hm=15ba790f5fc1a21d78cc076624a9637746174f3757442ed928d69933ead0dc9e&=&format=webp&quality=lossless&width=437&height=437" 
+             alt="Rare Axes Collection" class="product-image">
+        <div class="product-title">Rare Boxed Axes</div>
+        <div class="product-description">
+            Discover an exclusive set of rare axes, including the Bluesteel Axe, Many Axe, and Endtimes Axe. Perfect for the discerning collector!
+        </div>
+        <div class="product-price">$0.75</div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+</body>
+</html>
