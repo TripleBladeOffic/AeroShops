@@ -32,17 +32,22 @@
             padding: 20px;
             border-radius: 15px;
             width: 90%;
-            max-width: 600px;
-            text-align: center;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
         .product-image {
-            width: 100%;
-            max-width: 400px;
+            width: 40%;
             height: auto;
             border-radius: 10px;
-            margin-bottom: 20px;
+        }
+
+        .product-info {
+            width: 55%;
+            text-align: left;
         }
 
         .product-title {
@@ -71,6 +76,7 @@
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: inline-block;
         }
 
         .checkout-btn:hover {
@@ -82,12 +88,14 @@
     <div class="product-detail">
         <img src="https://media.discordapp.net/attachments/1260999448407052390/1274276910750367835/eyeimage_1.png?ex=66c1aa5a&is=66c058da&hm=96d007b69b7b5c65f381edee7cd8e7902a0683abd4efa738e7a9bdfd6a9c763b&=&format=webp&quality=lossless&width=437&height=437" 
              alt="Eyes Product Image" class="product-image">
-        <div class="product-title">Eyes</div>
-        <div class="product-description">
-            A mesmerizing collection filled with countless eyes to satisfy all your visual curiosities and needs.
+        <div class="product-info">
+            <div class="product-title">Eyes</div>
+            <div class="product-description">
+                A mesmerizing collection filled with countless eyes to satisfy all your visual curiosities and needs.
+            </div>
+            <div class="product-price">$0.75</div>
+            <button class="checkout-btn">Checkout</button>
         </div>
-        <div class="product-price">$0.75</div>
-        <button class="checkout-btn">Checkout</button>
     </div>
 </body>
 </html>
